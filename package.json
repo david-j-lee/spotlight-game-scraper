@@ -1,0 +1,29 @@
+{
+  "name": "spotlight-game-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-aws": "aws s3 sync bin/ s3://daebit.com/images"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "bin/*"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "probe-image-size": "^6.0.0",
+    "sharp": "^0.26.3",
+    "ws": "^7.4.0"
+  }
+}
